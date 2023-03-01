@@ -74,13 +74,13 @@ python3 manage.py runserver
 
 ### Некоторые примеры запросов
 | тип запроса | эндпоинт | что делает |
-| ------ | ------ |
-| POST | [http://127.0.0.1:8000/api/v1/posts/] | Создание публикации |
-| GET | [http://127.0.0.1:8000/api/v1/posts/{id}/] | Получение одной публикации |
-| PUT | [http://127.0.0.1:8000/api/v1/posts/{id}/] | Обновление публикации |
-| DELETE | [http://127.0.0.1:8000/api/v1/posts/{id}/] | Удаление публикации |
-| GET | [http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/] | Получение  комментариев |
-| POST | [http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/] | Создание комментария |
-| PATCH | [http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/{id}/] | Частичное обновление комментария |
-| POST | [http://127.0.0.1:8000/api/v1/follow/] | Подписка |
-| POST | [http://127.0.0.1:8000/api/v1/jwt/create/] | Получить JWT-токен |
+| ------ | ------ | ------ |
+| POST | http://127.0.0.1:8000/api/v1/posts/ | Создание публикации |
+| GET | http://127.0.0.1:8000/api/v1/posts/{id}/ | Получение одной публикации |
+| PUT | http://127.0.0.1:8000/api/v1/posts/{id}/ | Обновление публикации |
+| DELETE | http://127.0.0.1:8000/api/v1/posts/{id}/ | Удаление публикации |
+| GET | http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/ | Получение  комментариев |
+| POST | http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/ | Создание комментария |
+| PATCH | http://127.0.0.1:8000/api/v1/posts/{post_id}/comments/{id}/ | Частичное обновление комментария |
+| POST | http://127.0.0.1:8000/api/v1/follow/ | Подписка |
+| POST | http://127.0.0.1:8000/api/v1/jwt/create/ | Получить JWT-токен |
