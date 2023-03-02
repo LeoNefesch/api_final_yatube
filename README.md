@@ -1,9 +1,9 @@
 ### О чём проект?
-**Проект написан с применением архитектуры REST**
-**Представляет из себя соцсеть со следующими возможностями:**
+##### Проект написан с применением архитектуры REST
+##### Представляет из себя соцсеть со следующими возможностями:
  - авторизация и аутентификация пользователя;
  - добавление, редактирование и удаление пользователем своих постов;
- - возможность классифицировать сови посты по темам;
+ - возможность классифицировать свои посты по темам;
  - просмотров постов других пользователей;
  - возможность оставлять комментарии;
  - подписка на интересных авторов.
@@ -89,7 +89,7 @@ python3 manage.py runserver
 
 ### Некоторые примеры запросов и ответов:
 **Регистрация нового пользователя**
-
+```
 POST http://127.0.0.1:8000/api/v1/users/
 Content-Type: application/json
 
@@ -97,48 +97,60 @@ Content-Type: application/json
     "username": "newuser",
     "password": "Change_me"
 }
+```
 
 **Ответ**
+```
 {
-  "email": "",
-  "username": "newuser",
-  "id": 1
+    "email": "",
+    "username": "newuser",
+    "id": 1
 }
+```
 
 **Запрос на получение JWT-токена**
-
+```
 POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
 *тело запроса:*
 {
     "username": "newuser",
     "password": "Change_me"
 }
+```
 
 **Ответ**
+```
 {
-"refresh": "string",
-"access": "string"
+    "refresh": "string",
+    "access": "string"
 }
+```
 
 **Запрос на создание публикации**
+```
 POST http://127.0.0.1:8000/api/v1/posts/
+Content-Type: application/json
 Authorization: Bearer <jwt-токен, значение ключа "access">
-*тело запроса:*
+
 {
-"text": "string",
-"image": "string",
-"group": 0
+    "text": "string",
+    "image": "string",
+    "group": 0
 }
+```
 
 **Ответ**
+```
 {
-"id": 0,
-"author": "string",
-"text": "string",
-"pub_date": "2019-08-24T14:15:22Z",
-"image": "string",
-"group": 0
+    "id": 0,
+    "author": "string",
+    "text": "string",
+    "pub_date": "2019-08-24T14:15:22Z",
+    "image": "string",
+    "group": 0
 }
+```
 
 
 ### Проект выполнил студент Яндекс Практикума
